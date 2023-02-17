@@ -1,14 +1,22 @@
 import clsx from 'clsx';
 
-const Button = 
-  (
+const Button = (
     {
-      variant = 'btn-accent',
+      type = 'button',
+      variant = 'accent',
       children
     }
   ) => {
     return (
-      <button className={clsx('btn text-base-100', variant)}>{children}</button>
+      <button
+        type={type}
+        className={clsx(
+          'btn text-base-100',
+          `btn-${variant}`
+        )}
+      >
+        {children}
+      </button>
     )
   }
 
