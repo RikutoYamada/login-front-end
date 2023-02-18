@@ -1,4 +1,5 @@
-import Button from '../components/elements/Button/Button'
+import Button from '@/components/elements/Button/Button'
+import Card from '@/components/elements/Card/Card'
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
         Hello world!
       </h1>
       <Button>Button</Button>
+      <Card/>
     </>
   )
 }
