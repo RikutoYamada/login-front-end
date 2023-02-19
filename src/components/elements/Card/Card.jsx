@@ -8,17 +8,16 @@ const sizes = {
 
 const Card = (
   {
-    varient = 'base-100',
+    className = '',
     size = 'sm',
     children
   }
 ) => {
   return (
-    <div className={clsx('card shadow-xl', `bg-${varient}`, sizes[size])}>
-      <div className='card-body'>
-        {children}
-      </div>
+    <div className={clsx('p-6 bg-white border border-gray-200 rounded-lg shadow', sizes[size], className)}>
+      {children}
     </div>
+
   )
 }
 
