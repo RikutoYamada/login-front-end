@@ -6,25 +6,17 @@ const Header = (
   }
 ) => {
   return (
-    <div className="navbar bg-accent">
-      <div className="flex-1">
-        <Link href='/' className="btn btn-ghost normal-case text-xl text-base-100">MyApp</Link>
-      </div>
-      <div className="flex-none text-base-100">
-          {
-            isSignedIn ? (             
-              <ul className="menu menu-horizontal px-1">
-                <li><Link href='/signin' onClick={handleSignOut}>ログアウト</Link></li>
-              </ul>
-            ) : (
-              <ul className="menu menu-horizontal px-1">
-                <li><Link href='/signup'>新規登録</Link></li>
-                <li><Link href='/signin'>ログイン</Link></li>
-              </ul>
-            )
-          }
-      </div>
-    </div>
+    <header>
+      <nav className='flex bg-teal-500 p-6 justify-between'>
+        <Link href='/' passHref>
+          <span className='font-semibold text-xl text-white'>MyApp</span>
+        </Link>
+        <div className='flex w-36 justify-between'>
+          <Link href='/signin' className='text-teal-100 hover:text-white'>ログイン</Link>
+          <Link href='/signin' className='text-teal-100 hover:text-white'>新規登録</Link>
+        </div>
+      </nav>
+    </header>
   )
 }
 
